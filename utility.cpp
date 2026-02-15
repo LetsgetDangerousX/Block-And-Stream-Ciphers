@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <iterator>
 #include <iostream>
+#include <vector>
 
 // readFile into vector of bytes
 
@@ -57,6 +58,7 @@ bool validateArgs(int argc, char* argv[], std::string& cipherType, std::string& 
         std::cerr << "Invalid Mode Type" << std::endl;
         exit(1);
     }
+    return true;
 }
 
 std::vector<unsigned char> readFile(const std::string& filename){
